@@ -1,0 +1,20 @@
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <script>
+      var messages = {{ messages | safe }};
+      for (var i=0; i<messages.length; i++) {
+        alert(messages[i]);
+      }
+        </script>
+    {% endif %}
+    {% endwith %}
+
+<form action="{{url_for('compra')}}" method="POST">
+    <input type="text" name="placa" placeholder="placa">
+    <input type="text" name="marca" placeholder="marca">
+    <input type="text" name="ano" placeholder="ano">
+    <input type="text" name="modelo" placeholder="modelo">
+    <input type="text" name="status" placeholder="status">
+    <input type="text" name="valor_de_compra" placeholder="valor_de_compra">
+    <input type="submit" value="Cadastrar">
+</form>

@@ -1,0 +1,21 @@
+<table border="1">
+    <tr>
+        <th>PLACA</th>
+        <th>VEÍCULO</th>
+        <th>DESPESA</th>
+        <th>VALOR GASTO</th>
+    </tr>
+    {% for gasto in gastos %}
+    <tr>
+        <td>{{gasto[3]}}</td>
+        <td>{{gasto[4]}}</td>
+        <td>{{gasto[2]}}</td>
+        <td>{{gasto[1]}}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<br><br>
+<h3>NO TOTAL FORAM GASTOS {{total_despesas}}</h3><BR></BR>
+<h3>ESTE VEÍCULO FOI COMPRADO POR: {{valor_compra}}</h3> <br><br>
+<h3>TOTAL GASTO ATÉ O MOMENTO: {{total_despesas + valor_compra}}</h3>

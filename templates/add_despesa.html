@@ -1,0 +1,14 @@
+<form action="{{url_for('despesa')}}" method="POST">
+    <select name="Carros" id="">
+        <option SELECTED>Escolha o veículo</option>
+        {% for carro in carros%}
+        <option value="{{carro[3]}}">{{carro[0]}} - {{carro[1]}} - {{carro[2]}}</option>
+        {% endfor%} 
+    </select>
+    <input type="text" name="despesa" placeholder="DESPESA">
+    <input type="number" name="valor_gasto" id="">
+    <textarea name="descricao" rows="4" cols="50"></textarea>
+    <input type="submit" value="Cadastrar">
+
+
+</form>
